@@ -36,12 +36,13 @@ const Hero = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 2, ease: "easeInOut" }}
       className="h-screen relative overflow-hidden "
+      style={{ backgroundImage: "url('/fam.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
     >
       <div className="grid grid-cols-2 gap-6 h-full">
         <div className="mt-20">
           <h1 className="font-lato  text-[60px] pl-28">Healthy Living</h1>
-          <h1 className="font-domine text-[58px] text-primary text-center">
-            Care that’s always there, for you and your family
+          <h1 className="font-domine text-[30px] text-white text-center">
+          Your family's health is our priority. We ensure the highest standards of data protection, keeping your health information safe and secure
           </h1>
           <div className="bg-green-300/25 py-20 px-4 mt-28  rounded-xl grid grid-cols-2 ">
             <h1 className="font-extrabold w-full text-[25px]  text-center leading-8 ">
