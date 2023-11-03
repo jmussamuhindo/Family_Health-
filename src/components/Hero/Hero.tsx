@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import { useEffect, useRef, useState } from "react"
 import { Arrow } from "../Icons/Icons"
-import { Input } from "../ui/input"
+import { Textarea } from "../ui/textarea"
 
 const Hero = () => {
   const [containerHeight, setContainerHeight] = useState<number>(0)
@@ -36,32 +36,33 @@ const Hero = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 2, ease: "easeInOut" }}
-      className="h-screen relative overflow-hidden "
+      className="h-screen fixed right-[136px] left-[136px] overflow-hidden "
       style={{
         backgroundImage: "url('/fam.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center"
       }}
     >
-      <div className="grid grid-cols-2 gap-6 h-full">
-        <div className="mt-20">
-          <h1 className="font-lato  text-[60px] pl-28">Healthy Living</h1>
+      <div className="grid grid-cols-2 gap-6 h-[90%] ">
+        <div className="mt-20 px-3">
+          <h1 className="font-lato  text-[60px] pl-28 text-primary">
+            Healthy Living
+          </h1>
           <h1 className="font-domine text-[30px] text-white text-center">
             Your family's health is our priority. We ensure the highest
             standards of data protection, keeping your health information safe
             and secure
           </h1>
-          <div className="bg-green-300/25 py-20 px-4 mt-28  rounded-xl grid grid-cols-2 ">
-            <h1 className="font-extrabold w-full text-[25px]  text-center leading-8 ">
-              Let us be your advantage now
+          <div className="bg-green-500/20 py-16 px-4 mt-28  rounded-xl grid grid-cols-2 gap-4 ">
+            <h1 className="font-medium text-white w-full text-[25px]  text-center leading-8 ">
+              For any idea or support needs, please leave your message.
             </h1>
             <span className="space-y-4 ">
-              <Input
-                type="email"
-                placeholder="Enter your work Email"
+              <Textarea
+                placeholder="Enter your message here"
                 className="h-full border-none focus:border-none pb-4 pt-2"
               />
-              <div className=" bg-black relative group hover:bg-secondary transition duration-300 ease-in-out grid place-items-center rounded-lg  py-2 ">
+              <div className=" bg-black relative group hover:bg-secondary/40 cursor-pointer transition duration-300 ease-in-out grid place-items-center rounded-lg  py-2 ">
                 <span className=" transition duration-300 ease-in-out h-full flex items-center justify-center ">
                   <p className="text-white font-bold">Try for free Now</p>
                   <Arrow
