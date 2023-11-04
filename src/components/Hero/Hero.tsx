@@ -62,13 +62,13 @@ const Hero = () => {
                 placeholder="Enter your message here"
                 className="h-full border-none focus:border-none pb-4 pt-2"
               />
-              <div className=" bg-black relative group hover:bg-secondary/40 cursor-pointer transition duration-300 ease-in-out grid place-items-center rounded-lg  py-2 ">
+              <div className=" bg-black relative group hover:bg-secondary cursor-pointer transition duration-300 ease-in-out grid place-items-center rounded-lg  py-2 ">
                 <span className=" transition duration-300 ease-in-out h-full flex items-center justify-center ">
                   <p className="text-white font-bold">Try for free Now</p>
                   <Arrow
                     width={20}
                     height={16}
-                    className=" absolute bottom-[30%] right-[1rem] md:right-[2.8rem]  md:group-hover:right-[2rem] group-hover:right-[4rem] group-hover: group-transition duration-300 ease-in-out"
+                    className=" absolute bottom-[30%] right-[1rem] md:right-[2.5rem]  md:group-hover:right-[2rem] group-hover:right-[4rem] group-hover: group-transition duration-300 ease-in-out"
                   />
                 </span>
               </div>
@@ -172,7 +172,7 @@ const Hero = () => {
               />
             </div>
 
-            <div className=" w-full h-[300px] relative rounded ">
+            <div className=" w-full h-[300px] bg-white relative rounded ">
               <Image
                 src={"/image11.png"}
                 fill
