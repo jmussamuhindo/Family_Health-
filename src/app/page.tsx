@@ -5,11 +5,11 @@ import { NavBar } from "@/components/NavBar"
 import { useState } from "react"
 
 export default function Home() {
-  const [pages, setPages] = useState<string>("about")
+  const [pages, setPages] = useState<string>("home")
   return (
     <main className=" bg-[#dce9e2] h-screen">
       <div className="container">
-        <NavBar />
+        <NavBar setPages={setPages} />
         {pages === "home" && <Hero />}
         {pages === "about" && <AboutPage />}
       </div>
