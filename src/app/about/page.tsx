@@ -1,7 +1,9 @@
+"use client"
 import { motion } from "framer-motion"
 import Image from "next/image"
-import { Button } from "../ui/button"
-const AboutPage = () => {
+import { CircleDesign } from "../../components/Icons/Icons"
+import { Button } from "../../components/ui/button"
+const aboutPage = () => {
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -9,12 +11,13 @@ const AboutPage = () => {
       transition={{ duration: 1.2, ease: "easeInOut" }}
       className="w-full mt-24"
     >
-      <div className="flex justify-between ">
+      <div className="flex justify-between relative ">
+        <CircleDesign className="-z-0 absolute -left-32 bottom-4" />
         <motion.div
           initial={{ y: -300, opacity: 0.2 }}
           animate={{ y: 1, opacity: 1 }}
           transition={{ duration: 1.2, ease: "easeInOut" }}
-          className="w-[300px] h-[400px] relative rounded-t-full overflow-hidden  mt-[210px] group"
+          className="w-[300px] h-[400px] relative rounded-t-full overflow-hidden  mt-[210px] group z-50"
         >
           <Image
             src="/aboutDoctorPc.jpeg"
@@ -24,7 +27,7 @@ const AboutPage = () => {
             style={{ objectFit: "cover" }}
           />
         </motion.div>
-        <div className="flex flex-col space-y-52 mt-5 max-w-[500px]">
+        <div className="flex flex-col space-y-20 mt-5 max-w-[500px]">
           <div>
             {" "}
             <span className="flex space-x-2 justify-center items-center text-[60px] font-serif">
@@ -46,11 +49,14 @@ const AboutPage = () => {
           </div>
 
           <span className="space-y-5 text-center">
-            <p className="text-xs">
-              Do you want an appoitment with our doctors?
+            <p className="text-base">
+              Do you want an appointment with our doctors?
               <br /> press this button 👇
             </p>
-            <Button text="Apoitment" className="text-white bg-black" />
+            <Button
+              text="Appointment"
+              className="text-white text-xl bg-black py-8 px-8 rounded-full"
+            />
           </span>
         </div>
         <motion.div
@@ -72,4 +78,4 @@ const AboutPage = () => {
   )
 }
 
-export default AboutPage
+export default aboutPage

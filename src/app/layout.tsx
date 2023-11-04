@@ -1,3 +1,4 @@
+import { NavBar } from "@/components/NavBar"
 import { cn } from "@/lib/utils"
 import type { Metadata } from "next"
 import { Domine, Inter, Lato } from "next/font/google"
@@ -28,6 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
+          "container bg-[#dce9e2]",
           lato.variable,
           "font-lato",
           domine.variable,
@@ -35,7 +37,8 @@ export default function RootLayout({
           inter.className
         )}
       >
-        {children}
+        <NavBar />
+        <div className="mt-[80px]"> {children}</div>
       </body>
     </html>
   )

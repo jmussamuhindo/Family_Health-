@@ -25,8 +25,8 @@ const Hero = () => {
           repeat: Infinity,
           repeatType: "loop",
           duration: 40,
-          ease: "linear",
-          delay: 1
+          ease: "linear"
+          // delay: 0.5
         }
       }
     }
@@ -35,8 +35,8 @@ const Hero = () => {
     <motion.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 2, ease: "easeInOut" }}
-      className="h-screen fixed right-[136px] left-[136px] overflow-hidden "
+      transition={{ duration: 1.5, ease: "easeInOut" }}
+      className="h-full fixed right-[136px] left-[136px] overflow-hidden "
       style={{
         backgroundImage: "url('/fam.jpg')",
         backgroundSize: "cover",
