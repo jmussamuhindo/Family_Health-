@@ -30,9 +30,9 @@ const AboutPage = () => {
             <span className="flex space-x-2 justify-center items-center text-[60px] font-serif">
               <h1 className="">About</h1>
               <motion.h1
-                initial={{ rotate: 45 }}
-                animate={{ rotate: -9 }}
-                transition={{ duration: 2, ease: "easeInOut" }}
+                initial={{ rotate: 75 }}
+                animate={{ rotate: 0 }}
+                transition={{ duration: 1.7, ease: "easeInOut" }}
                 className=" text-[#ffadde]"
               >
                 us
