@@ -170,7 +170,9 @@ const Page = () => {
           )}
         </div>
       </motion.div>
-      {isAppointmentOpen && <Appointment className="mt-16" />}
+      {isAppointmentOpen && doctorToMap.length !== 0 && selectedDoctor && (
+        <Appointment className="mt-16" />
+      )}
     </motion.section>
   )
 }
