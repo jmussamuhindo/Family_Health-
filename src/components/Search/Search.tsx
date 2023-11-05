@@ -31,7 +31,7 @@ const Search = ({ searchValue, handleSearch, className }: SearchProp) => {
         type="text"
         value={searchValue}
         placeholder="Search here"
-        className="w-full focus:border border-none py-0"
+        className="w-full "
         onChange={(e) => handleSearch(e.target.value)}
       />
     </div>
