@@ -21,6 +21,9 @@ const NavBar = () => {
             <a href="/doctors"> Doctors</a>
           </li>
           <li className="cursor-pointer hover:text-primary transition duration-300 ease-in-out">
+            <a href="/profile">Profile</a>
+          </li>
+          <li className="cursor-pointer hover:text-primary transition duration-300 ease-in-out">
             Contact us
           </li>
         </ul>
