@@ -82,7 +82,7 @@ const ProfileImage = () => {
         </AlertDialogContent>
       </AlertDialog>
       <div>
-        <div className="w-[300px] h-[200px] rounded-[16px] relative overflow-hidden border-white cursor-pointer group bg-white">
+        <div className="w-[250px] h-[200px] rounded-[16px] relative overflow-hidden border-white cursor-pointer group bg-white">
           <Image
             src={updatedImage ? updatedImage : "/image1.jpeg"}
             fill
