@@ -1,12 +1,19 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client"
 
+import { Appointments, Requests } from "@/components/DoctorTables"
 import { ArrowDawn, Edit } from "@/components/Icons/Icons"
 import { ProfileImage } from "@/components/ProfileImage"
 import { Separator } from "@/components/ui/separator"
+import { cn } from "@/lib/utils"
 import { motion } from "framer-motion"
+import { useState } from "react"
 
 const Profile = () => {
+  const [table, setTable] = useState<
+    "appointement" | "patients-requests" | "messages"
+  >("appointement")
+
   return (
     <>
       <motion.section
@@ -52,29 +59,67 @@ const Profile = () => {
         <Separator className="my-4 bg-primary" />
         <div className="flex justify-between items-center space-x-4 ">
           <span className="flex items-end justify-center space-x-5">
-            <p className="text-[20px] cursor-pointer hover:text-primary font-semibold transition duration-300 ease-in-out">
+            <p
+              className={cn(
+                "text-[20px] cursor-pointer hover:text-primary font-semibold transition duration-500 ease-in-out",
+                table === "appointement" && "text-primary"
+              )}
+              onClick={() => setTable("appointement")}
+            >
               Today's Appointments
             </p>
 
-            <ArrowDawn />
+            <ArrowDawn
+              className={cn(
+                "transition duration-500 ease-in-out",
+                table === "appointement" && "rotate-180 fill-primary"
+              )}
+            />
           </span>
 
           <Separator orientation="vertical" className="bg-primary w-px h-8" />
           <span className="flex items-end justify-center space-x-5">
-            <p className="text-[20px] cursor-pointer hover:text-primary font-semibold transition duration-300 ease-in-out">
+            <p
+              className={cn(
+                "text-[20px] cursor-pointer hover:text-primary font-semibold transition duration-500 ease-in-out",
+                table === "patients-requests" && "text-primary"
+              )}
+              onClick={() => setTable("patients-requests")}
+            >
               {" "}
               New Patient Requests
             </p>
-            <ArrowDawn />
+
+            <ArrowDawn
+              className={cn(
+                "transition duration-500 ease-in-out",
+                table === "patients-requests" && "rotate-180 fill-primary"
+              )}
+            />
           </span>
 
           <Separator orientation="vertical" className="bg-primary w-px h-8" />
           <span className="flex items-end justify-center space-x-5">
-            <p className="text-[20px] cursor-pointer hover:text-primary font-semibold transition duration-300 ease-in-out">
+            <p
+              className={cn(
+                "text-[20px] cursor-pointer hover:text-primary font-semibold transition duration-500 ease-in-out",
+                table === "messages" && "text-primary"
+              )}
+              onClick={() => setTable("messages")}
+            >
               Urgent Messages{" "}
             </p>
-            <ArrowDawn />
+            <ArrowDawn
+              className={cn(
+                "transition duration-500 ease-in-out",
+                table === "messages" && "rotate-180 fill-primary"
+              )}
+            />
           </span>
+        </div>
+        <div>
+          {table === "appointement" && <Appointments />}
+          {table === "patients-requests" && <Requests />}
         </div>
       </motion.section>
     </>
