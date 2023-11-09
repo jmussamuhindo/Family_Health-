@@ -23,7 +23,7 @@ const Profile = () => {
         className="w-full mt-40 space-y-5"
       >
         <div className="grid place-content-center">
-          <h1 className="text-5xl text-primary mx-auto ">WELCOME,DR.MUSSA</h1>
+          <h1 className="text-5xl text-primary mx-auto ">WELCOME, DR. MUSSA</h1>
         </div>
         <div className="grid grid-cols-3">
           <div className="space-y-2">
